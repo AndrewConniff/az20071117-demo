@@ -37,3 +37,4 @@
 /workspaces/az20071117-demo/obj/Debug/net8.0/az20071117-demo.pdb
 /workspaces/az20071117-demo/obj/Debug/net8.0/az20071117-demo.genruntimeconfig.cache
 /workspaces/az20071117-demo/obj/Debug/net8.0/ref/az20071117-demo.dll
+/workspaces/az20071117-demo/bin/Debug/net8.0/sampledata.json
