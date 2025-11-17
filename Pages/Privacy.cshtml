@@ -1,8 +1,67 @@
 ﻿@page
 @model PrivacyModel
 @{
-    ViewData["Title"] = "Privacy Policy";
+        ViewData["Title"] = "Employee Directory";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    .employee-table { width:100%; border-collapse: collapse; margin-top:20px; }
+    .employee-table th, .employee-table td { border: 1px solid #ddd; padding: 8px; }
+    .employee-table th { background: linear-gradient(180deg,#f8fafc,#eef2f7); color:#333; text-align:left; }
+    .employee-row:nth-child(even) { background:#fbfbfb; }
+    .employee-card { max-width:1000px; margin: 12px auto; padding:16px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); background:white; }
+    .page-title { font-family: Arial, Helvetica, sans-serif; font-size:28px; margin:0; }
+    .muted { color:#666; font-size:14px; }
+</style>
+
+<div class="employee-card">
+    <h1 class="page-title">@ViewData["Title"]</h1>
+    <p class="muted">A simple table showing sample employee information (loaded from <code>/sampledata.json</code>).</p>
+
+    <div id="table-container">
+        <table id="employees" class="employee-table" aria-describedby="tabledesc">
+            <caption id="tabledesc" style="caption-side:bottom; text-align:left; padding-top:8px; color:#666;">Sample employee records</caption>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Hiring Date</th>
+                    <th>Department</th>
+                    <th>Job Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    async function loadEmployees(){
+        try{
+            const res = await fetch('/sampledata.json', {cache: 'no-store'});
+            if(!res.ok) throw new Error('Failed to fetch sample data');
+            const data = await res.json();
+            const tbody = document.querySelector('#employees tbody');
+            tbody.innerHTML = '';
+            data.forEach((emp, idx) => {
+                const tr = document.createElement('tr');
+                tr.className = 'employee-row';
+                const hire = new Date(emp.HiringDate).toLocaleDateString();
+                tr.innerHTML = `
+                    <td>${emp.FirstName}</td>
+                    <td>${emp.LastName}</td>
+                    <td>${hire}</td>
+                    <td>${emp.Department}</td>
+                    <td>${emp["Job Title"]}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }catch(err){
+            const tbody = document.querySelector('#employees tbody');
+            tbody.innerHTML = `<tr><td colspan="5">Error loading data: ${err.message}</td></tr>`;
+        }
+    }
+    window.addEventListener('DOMContentLoaded', loadEmployees);
+</script>

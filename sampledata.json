@@ -1,0 +1,12 @@
+[
+  { "FirstName": "Ava", "LastName": "Johnson", "HiringDate": "2018-03-12", "Department": "Engineering", "Job Title": "Senior Software Engineer" },
+  { "FirstName": "Liam", "LastName": "Garcia", "HiringDate": "2019-07-01", "Department": "IT", "Job Title": "Cloud Architect" },
+  { "FirstName": "Sophia", "LastName": "Martinez", "HiringDate": "2020-11-20", "Department": "HR", "Job Title": "HR Manager" },
+  { "FirstName": "Noah", "LastName": "Lee", "HiringDate": "2017-05-15", "Department": "Sales", "Job Title": "Account Executive" },
+  { "FirstName": "Mia", "LastName": "Davis", "HiringDate": "2021-09-30", "Department": "Marketing", "Job Title": "Content Strategist" },
+  { "FirstName": "Oliver", "LastName": "Brown", "HiringDate": "2016-01-05", "Department": "Finance", "Job Title": "Financial Analyst" },
+  { "FirstName": "Isabella", "LastName": "Wilson", "HiringDate": "2022-06-22", "Department": "Customer Support", "Job Title": "Support Lead" },
+  { "FirstName": "Elijah", "LastName": "Anderson", "HiringDate": "2015-12-01", "Department": "Operations", "Job Title": "Operations Manager" },
+  { "FirstName": "Charlotte", "LastName": "Thomas", "HiringDate": "2019-02-14", "Department": "Design", "Job Title": "UX Designer" },
+  { "FirstName": "James", "LastName": "Moore", "HiringDate": "2023-04-08", "Department": "Engineering", "Job Title": "DevOps Engineer" }
+]
