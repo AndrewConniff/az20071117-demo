@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/workspaces/az20071117-demo/wwwroot/sampledata.json",
+      "PackagePath": "staticwebassets/sampledata.json"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.az20071117-demo.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

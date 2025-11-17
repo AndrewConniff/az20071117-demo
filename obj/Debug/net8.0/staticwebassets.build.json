@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RAH/Z9rh48GKwqPH20lRp9N2Li6kp33S3uA6v97TMIM=",
+  "Hash": "WuoTFgyfCCDcryCE8f8F+RxC98Emnx2qi0ympjMie6Q=",
   "Source": "az20071117-demo",
   "BasePath": "_content/az20071117-demo",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/workspaces/az20071117-demo/wwwroot/sampledata.json",
+      "SourceId": "az20071117-demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/workspaces/az20071117-demo/wwwroot/",
+      "BasePath": "_content/az20071117-demo",
+      "RelativePath": "sampledata.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/sampledata.json"
     }
   ]
 }
